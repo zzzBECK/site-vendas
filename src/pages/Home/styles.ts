@@ -20,6 +20,10 @@ export const FilterContainer = styled.div`
   width: 20%;
   padding: 0.4%;
   box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    width: 0%;
+  }
 `;
 
 export const CardsContainer = styled.div`
@@ -27,6 +31,10 @@ export const CardsContainer = styled.div`
   flex-wrap: wrap;
   width: 80%;
   height: fit-content;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const WholeCard = styled.div`

@@ -10,6 +10,10 @@ export const FilterContainer = styled.div`
   border-radius: 0.8rem; */
   gap: 2%;
   padding-left: 4%;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const Title = styled.div`
@@ -21,7 +25,7 @@ export const Title = styled.div`
   box-sizing: border-box;
 
   font-family: Montserrat;
-  font-size: calc(1vw + 1vh);
+  font-size: calc(1vw + 0.5vh);
 `;
 
 export const OptionsContainer = styled.div`
