@@ -8,10 +8,11 @@ export const CardStyle = styled.div`
   border-radius: 0.8rem;
   box-shadow: 0px 0px 20px #00000029;
   flex-direction: column;
-  background-color: #e4e4e4;
+  background-color: white;
 `;
 
 export const ImageContainer = styled.div`
+  position: relative;
   display: flex;
   width: 100%;
   height: 60%;
@@ -26,7 +27,7 @@ export const TitleContainer = styled.h1`
   box-sizing: border-box;
   margin: 0;
   font-family: Montserrat;
-  font-size: 1.2vw;
+  font-size: calc(1.2vw + 1.2vh);
   padding: 4% 6% 0 6%;
 `;
 
@@ -39,8 +40,8 @@ export const Text = styled.h1<IText>`
   box-sizing: border-box;
   margin: 0;
   font-family: Montserrat;
-  font-size: 1.2vw;
-
+  font-size: ${(props: IText) =>
+    props.isDiscount ? "calc(0.6vw + 0.6vh)" : "calc(0.8vw + 0.8vh)"};
   ${(props: IText) =>
     props.isDiscount &&
     `
@@ -53,12 +54,12 @@ export const Value = styled.div`
   display: flex;
   width: 100%;
   gap: 5%;
+  align-items: baseline;
 `;
 
 export const Button = styled.div`
   display: flex;
-  height: 80%;
-  width: 15%;
+  width: 18%;
   box-sizing: border-box;
   border: 0.1px solid #252525;
   border-radius: 1.2rem;
@@ -81,7 +82,7 @@ export const Image = styled.img`
   box-sizing: border-box;
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: fill;
   border-radius: 0.8rem 0.8rem 0 0;
 `;
 
@@ -91,7 +92,7 @@ export const Title = styled.h1`
   box-sizing: border-box;
   margin: 0;
   font-family: Montserrat;
-  font-size: 1.2vw;
+  font-size: calc(0.8vw + 0.8vh);
   border-bottom: 1px solid #00000029;
   color: #252525;
   align-items: center;
@@ -105,4 +106,15 @@ export const PriceContainer = styled.div`
   padding: 2% 6%;
   justify-content: space-between;
   align-items: center;
+`;
+
+export const DiscountBadge = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ff5733;
+  color: white;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0 0 0.8rem 0.8rem;
 `;

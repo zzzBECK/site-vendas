@@ -10,6 +10,7 @@ import {
   Button,
   Value,
   Image,
+  DiscountBadge,
 } from "./styles";
 
 interface ICard {
@@ -24,6 +25,7 @@ export default function Card({ title, price, descount, image }: ICard) {
     <CardStyle>
       <ImageContainer>
         <Image src={image} />
+        {descount > 0 && <DiscountBadge>{descount}% OFF</DiscountBadge>}
       </ImageContainer>
       <TitleContainer>
         <Title>{title}</Title>
