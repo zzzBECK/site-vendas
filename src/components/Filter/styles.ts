@@ -23,6 +23,7 @@ export const Title = styled.div`
   align-items: center;
   cursor: pointer;
   box-sizing: border-box;
+  user-select: none;
 
   font-family: Montserrat;
   font-size: calc(1vw + 0.5vh);
@@ -40,6 +41,7 @@ export const Checkbox = styled.label`
   align-items: center;
   margin-bottom: 8px;
   cursor: pointer;
+  user-select: none;
 `;
 
 export const CheckboxInput = styled.input`
