@@ -18,7 +18,8 @@ export const ContentContainer = styled.div`
 export const FilterContainer = styled.div`
   display: flex;
   width: 20%;
-  background-color: red;
+  padding: 0.4%;
+  box-sizing: border-box;
 `;
 
 export const CardsContainer = styled.div`
@@ -45,7 +46,13 @@ export const WholeCard = styled.div`
 
 export const FooterContainer = styled.footer`
   display: flex;
+  box-sizing: border-box;
   width: 100%;
-  height: 10vh;
-  background-color: pink;
+  height: 15vh;
+  background-color: #ff5733;
+  justify-content: center;
+  align-items: center;
+  font-family: Montserrat;
+  font-size: calc(0.8vw + 0.8vh);
+  color: black;
 `;

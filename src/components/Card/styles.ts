@@ -116,5 +116,5 @@ export const DiscountBadge = styled.div`
   color: white;
   padding: 0.5rem;
   font-size: 1rem;
-  border-radius: 0 0 0.8rem 0.8rem;
+  border-radius: 0 0.8rem 0.8rem 0.8rem;
 `;

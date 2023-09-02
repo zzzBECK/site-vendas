@@ -1,23 +1,26 @@
 import Card from "../../components/Card";
 import Header from "../../components/Header";
 import {
-  PageContainer,
-  FooterContainer,
-  ContentContainer,
   CardsContainer,
-  WholeCard,
+  ContentContainer,
   FilterContainer,
+  FooterContainer,
+  PageContainer,
+  WholeCard,
 } from "./styles";
 
-import bule from "../../assets/bule.webp";
 import bandeja from "../../assets/bandeja.webp";
+import bule from "../../assets/bule.webp";
+import Filter from "../../components/Filter";
 
 export default function Home() {
   return (
     <PageContainer>
       <Header />
       <ContentContainer>
-        <FilterContainer></FilterContainer>
+        <FilterContainer>
+          <Filter />
+        </FilterContainer>
         <CardsContainer>
           <WholeCard>
             <Card
@@ -57,9 +60,41 @@ export default function Home() {
           <WholeCard>
             <Card title={"Prato"} price={20.99} descount={99} image={bandeja} />
           </WholeCard>
+          <WholeCard>
+            <Card
+              title={"teste2"}
+              price={20.99}
+              descount={99}
+              image={bandeja}
+            />
+          </WholeCard>
+          <WholeCard>
+            <Card
+              title={"test3"}
+              price={123.99}
+              descount={30}
+              image={bandeja}
+            />
+          </WholeCard>
+          <WholeCard>
+            <Card
+              title={"teste6"}
+              price={124124.99}
+              descount={15}
+              image={bandeja}
+            />
+          </WholeCard>
+          <WholeCard>
+            <Card
+              title={"teste4"}
+              price={123123.99}
+              descount={0}
+              image={bandeja}
+            />
+          </WholeCard>
         </CardsContainer>
       </ContentContainer>
-      <FooterContainer></FooterContainer>
+      <FooterContainer>© 2023 Todos os direitos reservados.</FooterContainer>
     </PageContainer>
   );
 }

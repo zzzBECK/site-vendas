@@ -1,5 +1,13 @@
 import SubHeader from "../SubHeader";
-import { HeaderContainer, Text, Top, SocialContainer } from "./styles";
+import {
+  HeaderContainer,
+  Text,
+  Top,
+  SocialContainer,
+  SubContainer,
+  OptionsContainer,
+  Option,
+} from "./styles";
 
 export default function Header() {
   return (
@@ -53,7 +61,14 @@ export default function Header() {
           </a>
         </SocialContainer>
       </Top>
-      <SubHeader />
+      <SubContainer>
+        <SubHeader />
+      </SubContainer>
+      <OptionsContainer>
+        <Option>Início</Option>
+        <Option>Catálogo</Option>
+        <Option>Entrar em Contato</Option>
+      </OptionsContainer>
     </HeaderContainer>
   );
 }
