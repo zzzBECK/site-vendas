@@ -128,6 +128,15 @@ export default function Home() {
   const paginate = (pageNumber: number) => {
     setCurrentPage(pageNumber);
   };
+
+  const handleClick = (index: number) => {
+    if (index + 1 === currentPage) {
+      return false;
+    } else {
+      return true;
+    }
+  };
+
   return (
     <PageContainer>
       <Header />
@@ -152,9 +161,15 @@ export default function Home() {
         {Array.from({
           length: Math.ceil(products.length / productsPerPage),
         }).map((_, index) => (
-          <Button key={index} style={{}} onClick={() => paginate(index + 1)}>
-            {index + 1}
-          </Button>
+          <Button
+            key={index}
+            style={{
+              backgroundColor: handleClick(index) ? "#333" : "#ff5733",
+            }}
+            onClick={() => {
+              paginate(index + 1);
+            }}
+          />
         ))}
       </Pagination>
       <FooterContainer>© 2023 Todos os direitos reservados.</FooterContainer>

@@ -93,9 +93,4 @@ export const Button = styled.button`
   &:hover {
     background-color: #ff5733;
   }
-
-  &:active,
-  &:focus {
-    background-color: #ff5733; /* Cor laranja quando clicado e em foco */
-  }
 `;
