@@ -25,18 +25,16 @@ export default function Filter() {
           style={{ justifySelf: "flex-end" }}
         />
       </Title>
-      {isOpen && (
-        <OptionsContainer>
-          <Checkbox>
-            <CheckboxInput type="checkbox" />
-            <CheckboxLabel>Em estoque (6)</CheckboxLabel>
-          </Checkbox>
-          <Checkbox>
-            <CheckboxInput type="checkbox" />
-            <CheckboxLabel>Fora de estoque (0)</CheckboxLabel>
-          </Checkbox>
-        </OptionsContainer>
-      )}
+      <OptionsContainer isOpen={isOpen}>
+        <Checkbox>
+          <CheckboxInput type="checkbox" />
+          <CheckboxLabel>Em estoque (6)</CheckboxLabel>
+        </Checkbox>
+        <Checkbox>
+          <CheckboxInput type="checkbox" />
+          <CheckboxLabel>Fora de estoque (0)</CheckboxLabel>
+        </Checkbox>
+      </OptionsContainer>
     </FilterContainer>
   );
 }

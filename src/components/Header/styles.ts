@@ -88,7 +88,9 @@ export const OptionsContainer = styled.div`
   box-sizing: border-box;
   width: 100%;
   height: 40%;
-  background-color: #ddd;
+  /* background-color: #ddd; */
+  background-color: #ff5733;
+
   justify-content: center;
   gap: 5%;
 `;
@@ -100,11 +102,12 @@ export const Option = styled.div`
   align-items: center;
   font-family: Montserrat;
   font-size: calc(0.7vw + 0.7vh);
+  color: white;
 
   transition: color 0.3s ease-in-out;
 
   &:hover {
     cursor: pointer;
-    color: #ff5733;
+    color: #333;
   }
 `;

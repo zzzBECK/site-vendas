@@ -11,7 +11,7 @@ export const PageContainer = styled.div`
 export const ContentContainer = styled.div`
   flex-grow: 1; /* Isso faz com que o conteúdo ocupe o espaço disponível */
   display: flex;
-  padding: 2% 14%;
+  padding: 2% 14% 0 14%;
   background-color: white;
 `;
 
@@ -31,6 +31,7 @@ export const CardsContainer = styled.div`
   flex-wrap: wrap;
   width: 80%;
   height: fit-content;
+  min-height: 100vh;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -63,4 +64,38 @@ export const FooterContainer = styled.footer`
   font-family: Montserrat;
   font-size: calc(0.8vw + 0.8vh);
   color: black;
+`;
+
+export const Pagination = styled.div`
+  display: flex;
+  width: 100%;
+  padding-left: 7%;
+  justify-content: center;
+  align-items: center;
+  height: 6vh;
+  gap: 0.8%;
+
+  @media (max-width: 768px) {
+    padding-left: 0%;
+  }
+`;
+
+export const Button = styled.button`
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #333;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  color: transparent;
+
+  &:hover {
+    background-color: #ff5733;
+  }
+
+  &:active,
+  &:focus {
+    background-color: #ff5733; /* Cor laranja quando clicado e em foco */
+  }
 `;

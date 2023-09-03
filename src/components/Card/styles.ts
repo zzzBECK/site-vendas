@@ -66,6 +66,7 @@ export const Button = styled.div`
   padding: 0.3em;
   cursor: pointer;
   transition: 0.5s ease-in-out;
+  user-select: none;
 
   &:hover {
     border: none;
@@ -84,6 +85,7 @@ export const Image = styled.img`
   width: 100%;
   object-fit: fill;
   border-radius: 0.8rem 0.8rem 0 0;
+  user-select: none;
 `;
 
 export const Title = styled.h1`

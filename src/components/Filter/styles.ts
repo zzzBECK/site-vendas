@@ -29,11 +29,19 @@ export const Title = styled.div`
   font-size: calc(1vw + 0.5vh);
 `;
 
-export const OptionsContainer = styled.div`
+interface IOptionsContainer {
+  isOpen: boolean;
+}
+
+export const OptionsContainer = styled.div<IOptionsContainer>`
   display: flex;
   box-sizing: border-box;
   flex-direction: column;
   width: 100%;
+  height: ${(props) => (props.isOpen ? "fit-content" : "0")};
+  opacity: ${(props) => (props.isOpen ? "1" : "0")};
+  overflow: hidden;
+  transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
 `;
 
 export const Checkbox = styled.label`
