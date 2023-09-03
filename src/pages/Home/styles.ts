@@ -63,7 +63,8 @@ export const FooterContainer = styled.footer`
   align-items: center;
   font-family: Montserrat;
   font-size: calc(0.8vw + 0.8vh);
-  color: black;
+  font-weight: 100;
+  color: white;
 `;
 
 export const Pagination = styled.div`
